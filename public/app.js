@@ -27,16 +27,16 @@ function initializeElementVariables()
 {
 	// Persona
 	alias = document.getElementById('input-name');
-	race = document.getElementByName('dropdown-race');
-	alignment = document.getElementByName('radio-alignment');
+	race = document.getElementsByName('dropdown-race');
+	alignment = document.getElementsByName('radio-alignment');
 	
 	// Stats
-	strength = document.getElementByName('range-strength');
-	dexterity = document.getElementByName('range-dexterity');
-	intelligence = document.getElementByName('range-intelligence');
-	wisdom = document.getElementByName('range-wisdom');
-	charisma = document.getElementByName('range-charisma');
-	luck = document.getElementByName('range-luck');
+	strength = document.getElementById('input-strength');
+	dexterity = document.getElementById('input-dexterity');
+	intelligence = document.getElementById('input-intelligence');
+	wisdom = document.getElementById('range-wisdom');
+	charisma = document.getElementById('input-charisma');
+	luck = document.getElementById('input-luck');
 	
 	// Inventory
 	itemListContainer = document.getElementById('item-list-items-container');
@@ -55,7 +55,7 @@ function initializeElementEvents()
 {
 	addItemButton.addEventListener('click', function (event)
 	{
-		if (!addItemInput.value || itemListContainer.childElementCount >= 5)
+		if (!addItemInput.value || itemListContainer.childElementCount >= maxInventoryItems)
 			return;
 
 		addItemToList(addItemInput.value);
