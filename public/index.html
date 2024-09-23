@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header>
+		HEADER
+	</header>
+
+	<main>
+		<h1>New Character</h1>
+
+		<form>
+			<fieldset>
+				<legend>Character</legend>
+				
+				<fieldset id="persona-container">
+					<legend>Persona</legend>
+					<span>
+						<label for="input-name">Name</label>
+						<input type="text" name="text-name" id="input-name"/>
+					</span>
+
+					<span>
+						<label for="input-race">Race</label>
+						<select name="dropdown-race" id="input-race">
+							<option value="Human">Human</option>
+							<option value="Dwarf">Dwarf</option>
+							<option value="Elf">Elf</option>
+							<option value="Halfling">Halfling</option>
+							<option value="Dragonborn">Dragonborn</option>
+							<option value="Gnome">Gnome</option>
+							<option value="Goliath">Goliath</option>
+							<option value="Orc">Orc</option>
+							<option value="Aarakocra">Aarakocra</option>
+							<option value="Centaur">Centaur</option>
+						</select>
+					</span>
+				</fieldset>
+
+				<fieldset id="alignments-container">
+					<legend>Alignment</legend>
+					<ul>
+						<h4>Chaotic</h4>
+						<li>
+							<input type="radio" name="radio-alignment" id="chaotic-good" value="Chaotic Good" />
+							<label for="chaotic-good">Chaotic good</label>
+						</li>
+						<input type="radio" name="radio-alignment" id="chaotic-neutral" value="Chaotic Neutral" />
+						<label for="chaotic-neutral">Chaotic neutral</label>
+						<li>
+						</li>
+						<input type="radio" name="radio-alignment" id="chaotic-evil" value="Chaotic Evil" />
+						<label for="chaotic-evil">Chaotic evil</label>
+						<li>
+						</li>
+					</ul>
+					
+					<ul>
+						<h4>Neutral</h4>
+						<li>
+							<input type="radio" name="radio-alignment" id="neutral-good" value="Neutral Good" />
+							<label for="neutral-good">Neutral good</label>
+						</li>
+						<li>
+							<input type="radio" name="radio-alignment" id="neutral-neutral" value="Neutral" />
+							<label for="neutral-neutral">Neutral</label>
+						</li>
+						<li>
+							<input type="radio" name="radio-alignment" id="neutral-evil" value="Neutral Evil" />
+							<label for="neutral-evil">Neutral evil</label>
+						</li>
+					</ul>
+					
+					<ul>
+						<h4>Lawful</h4>
+						<li>
+							<input type="radio" name="radio-alignment" id="lawful-good" value="Lawful Good" />
+							<label for="lawful-good">Lawful good</label>
+						</li>
+						<li>
+							<input type="radio" name="radio-alignment" id="lawful-neutral" value="Lawful Neutral" />
+							<label for="lawful-neutral">Lawful neutral</label>
+						</li>
+						<li>
+							<input type="radio" name="radio-alignment" id="lawful-evil" value="Lawful Evil" />
+							<label for="lawful-evil">Lawful evil</label>
+						</li>
+					</ul>
+				</fieldset>
+				
+				<fieldset id="stats-container">
+					<legend>Stats</legend>
+					<span>
+						<label for="range-strength">Strength</label>
+						<input type="range" name="range-strength" id="input-strength" />
+					</span>
+					<span>
+						<label for="range-dexterity">Dexterity</label>
+						<input type="range" name="range-strength" id="input-dexterity" />
+					</span>
+					<span>
+						<label for="range-intelligence">Intelligence</label>
+						<input type="range" name="range-strength" id="input-intelligence" />
+					</span>
+					<span>
+						<label for="range-wisdom">Wisdom</label>
+						<input type="range" name="range-strength" id="input-wisdom" />
+					</span>
+					<span>
+						<label for="range-charisma">Charisma</label>
+						<input type="range" name="range-strength" id="input-charisma" />
+					</span>
+					<span>
+						<label for="range-luck">Luck</label>
+						<input type="range" name="range-strength" id="input-luck" />
+					</span>
+				</fieldset>
+			</fieldset>
+
+			<fieldset id="inventory-container">
+				<legend>Inventory</legend>
+
+				<span id="inventory-header">
+					<span>
+						<label for="input-gold">Gold</label>
+						<input type="number" id="number-gold" />
+					</span>
+
+					<span>
+						<input type="text" id="text-add-item" />
+						<button id="button-add-item" type="button">Add Item</button>
+					</span>
+				</span>
+
+				<span id="item-list-container">
+					<ul>
+						<h4 id="item-list-header">Items</h4>
+						<span id="item-list-items-container">
+							
+						</span>
+					</ul>
+				</span>
+			</fieldset>
+
+			<button id="button-save-character" type="buttonn">Save Character</button>
+		</form>
+	</main>
+
+</body>
+</html>
