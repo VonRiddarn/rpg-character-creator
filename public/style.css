@@ -16,6 +16,8 @@ h1, h2, h3, h4, h5, h6
 {
 	font-family: Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 0.25rem;
 }
 
 main
@@ -24,6 +26,40 @@ main
 
 	max-width: var(--page-width);
 	margin: 0 auto;
+}
+
+header
+{
+	display: flex;
+	flex-direction: row;
+	max-width: var(--page-width);
+	margin: 0 auto;
+}
+
+.flashcard
+{
+	background-color:blanchedalmond;
+	border: var(--aestetic-border);
+	padding: 1rem;
+	margin: 0;
+	width: 200px;
+}
+
+.flashcard img
+{
+	max-width: 200px;
+}
+
+.flashcard h4
+{
+	border-bottom: var(--aestetic-border);
+}
+
+.flashcard ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 form > *

@@ -10,7 +10,23 @@
 <body>
 
 	<header>
-		HEADER
+		<section class="flashcard">
+			<img src="https://i.imgur.com/GV4Nvoj.jpeg" alt="Peanut the dog">
+			<h4>Name 1</h4>
+			<ul>
+				<li>Strength: 100</li>
+				<li>Dexterity: 20</li>
+			</ul>
+		</section>
+		
+		<section class="flashcard">
+			<img src="https://i.imgur.com/GV4Nvoj.jpeg" alt="Peanut the dog">
+			<h4>Name 2</h4>
+			<ul>
+				<li>Strength: 42</li>
+				<li>Dexterity: 100</li>
+			</ul>
+		</section>
 	</header>
 
 	<main>
@@ -24,7 +40,7 @@
 					<legend>Persona</legend>
 					<span>
 						<label for="input-name">Name</label>
-						<input type="text" name="text-name" id="input-name"/>
+						<input type="text" name="text-name" id="input-name" placeholder="Gorath Sheldhart"/>
 					</span>
 
 					<span>
@@ -69,7 +85,7 @@
 							<label for="neutral-good">Neutral good</label>
 						</li>
 						<li>
-							<input type="radio" name="radio-alignment" id="neutral-neutral" value="Neutral" />
+							<input type="radio" name="radio-alignment" id="neutral-neutral" value="Neutral" checked="checked" />
 							<label for="neutral-neutral">Neutral</label>
 						</li>
 						<li>
@@ -149,7 +165,7 @@
 				</span>
 			</fieldset>
 
-			<button id="button-save-character" type="buttonn">Save Character</button>
+			<button id="button-save-character" type="button">Save Character</button>
 		</form>
 	</main>
 
