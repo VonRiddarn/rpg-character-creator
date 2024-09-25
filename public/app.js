@@ -1,3 +1,20 @@
+// Pic enum
+const Racepicture = Object.freeze
+(
+	{
+		Human: "https://i.imgur.com/GV4Nvoj.jpeg",
+		Dwarf: "https://i.imgur.com/7nrEgXP.jpeg",
+		Elf: "https://i.imgur.com/Jt5y1Mc.jpeg",
+		Halfling: "https://i.imgur.com/uqiVPJK.jpeg",
+		Dragonborn: "https://i.imgur.com/i7oxXrY.jpeg",
+		Gnome: "https://i.imgur.com/6nkpCzo.jpeg",
+		Goliath: "https://i.imgur.com/E3fpDRL.jpeg",
+		Orc: "https://i.imgur.com/4k3FdXl.jpeg",
+		Aarakocra: "https://i.imgur.com/72kQpV0.jpeg",
+		Centaur: "https://i.imgur.com/7bCOdEU.jpeg",
+	}
+);
+
 const characters = [];
 
 // Persona
@@ -23,6 +40,7 @@ let addItemInput = null;
 let addItemButton = null;
 
 // Functionality
+let header = null;
 let saveCharacterButton = null;
 
 // Ensure variables are intiialized on page load
@@ -32,7 +50,7 @@ function initializeElementVariables()
 {
 	// Persona
 	inputAlias = document.getElementById('input-name');
-	inputRace = document.getElementsByName('dropdown-race');
+	inputRace = document.getElementById('input-race');
 	inputAlignment = document.getElementsByName('radio-alignment');
 	
 	// Stats
@@ -54,6 +72,7 @@ function initializeElementVariables()
 	addItemButton = document.getElementById('button-add-item');
 	
 	// Functionality
+	header = document.getElementById('header');
 	saveCharacterButton = document.getElementById('button-save-character');
 	
 	initializeElementEvents();
@@ -111,4 +130,49 @@ function saveCharacter()
 			items: itemListContainer.innerHTML,
 		},
 	);
+	
+	updateHeader();
+}
+
+function getLinkFromRace(race)
+{
+	switch(race)
+	{
+		case "Human":
+		return Racepicture.Human;
+		case "Dwarf":
+		return Racepicture.Dwarf;
+		case "Elf":
+		return Racepicture.Elf;
+		case "Dragonborn":
+		return Racepicture.Dragonborn;
+		case "Halfling":
+		return Racepicture.Halfling;
+		case "Goliath":
+		return Racepicture.Goliath;
+		case "Gnome":
+		return Racepicture.Gnome;
+		case "Aarakocra":
+		return Racepicture.Aarakocra;
+		case "Orc":
+		return Racepicture.Orc;
+		case "Centaur":
+		return Racepicture.Centaur;
+	}
+}
+
+function updateHeader()
+{
+	let c = characters[characters.length-1];
+	header.innerHTML +=
+	`
+		<section class="flashcard">
+			<img src=${getLinkFromRace(c.race)} alt=${c.race}>
+			<h4>${c.alias}</h4>
+			<ul>
+				<li>Strength: ${c.strength}</li>
+				<li>Dexterity: ${c.dexterity}</li>
+			</ul>
+		</section>
+	`;
 }
