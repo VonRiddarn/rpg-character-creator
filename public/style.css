@@ -30,8 +30,9 @@ main
 
 header
 {
-	display: flex;
-	flex-direction: row;
+	background-color: #424242;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	max-width: var(--page-width);
 	margin: 0 auto;
 }
@@ -42,7 +43,6 @@ header
 	border: var(--aestetic-border);
 	padding: 1rem;
 	margin: 0;
-	width: 200px;
 }
 
 .flashcard img
