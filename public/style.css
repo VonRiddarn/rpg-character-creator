@@ -50,9 +50,19 @@ header
 	max-width: 200px;
 }
 
-.flashcard h4
+.flashcard span
 {
+	display: flex;
+	flex-direction: column;
 	border-bottom: var(--aestetic-border);
+	text-align: center;
+	margin: 0.5rem;
+}
+
+.flashcard span > *
+{
+	margin: 0;
+	padding: 0.25rem;
 }
 
 .flashcard ul

@@ -115,12 +115,22 @@ function addItemToList(item)
 
 function saveCharacter()
 {
+	let av = null;
+
+	for (const a of inputAlignment) 
+	{
+		if(!a.checked)
+			continue;
+
+		av = a.value;
+	}
+
 	characters.push
 	(
 		{
 			alias: inputAlias.value,
 			race: inputRace.value,
-			alignment: inputAlignment.value,
+			alignment: av,
 			strength: inputStrength.value,
 			dexterity: inputDexterity.value,
 			intelligence: inputIntelligence.value,
@@ -168,10 +178,17 @@ function updateHeader()
 	`
 		<section class="flashcard">
 			<img src=${getLinkFromRace(c.race)} alt=${c.race}>
-			<h4>${c.alias}</h4>
+			<span>
+				<h4>${c.alias}</h4>
+				<p>${c.alignment}</p>
+			</span>
 			<ul>
 				<li>Strength: ${c.strength}</li>
 				<li>Dexterity: ${c.dexterity}</li>
+				<li>Intelligence: ${c.intelligence}</li>
+				<li>Wisdom: ${c.wisdom}</li>
+				<li>Charisma: ${c.charisma}</li>
+				<li>Luck: ${c.luck}</li>
 			</ul>
 		</section>
 	`;
