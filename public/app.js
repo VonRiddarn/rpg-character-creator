@@ -140,6 +140,7 @@ function saveCharacter() {
   });
 
   updateHeader();
+  clearInputs();
 }
 
 function getLinkFromRace(race) {
@@ -187,3 +188,23 @@ function updateHeader() {
 		</section>
 	`;
 }
+
+const clearInputs = () => {
+  document.getElementById("input-name").value = "";
+  document.getElementById("input-race").value = "Human";
+
+  // Stats
+  document.getElementById("input-strength").value = 50;
+  document.getElementById("input-dexterity").value = 50;
+  document.getElementById("input-intelligence").value = 50;
+  document.getElementById("input-wisdom").value = 50;
+  document.getElementById("input-charisma").value = 50;
+  document.getElementById("input-luck").value = 50;
+
+  // Inventory
+  document.getElementById("item-list-items-container").innerHTML = "";
+  document.getElementById("number-gold").value = 0;
+
+  itemListHeader = document.getElementById("item-list-header");
+  itemListHeader.innerHTML = `ITEMS (0 / ${maxInventoryItems})`;
+};
