@@ -82,6 +82,7 @@ function initializeElementEvents() {
       return;
 
     addItemToList(addItemInput.value);
+    updateButtonStates(); // Funktion för att kolla om man kan klicka på knappen.
   });
 
   saveCharacterButton.addEventListener("click", function (e) {
@@ -105,6 +106,15 @@ function addItemToList(item) {
   addItemInput.value = "";
   addItemInput.focus();
   itemListHeader.innerHTML = `ITEMS (${itemListContainer.childElementCount} / ${maxInventoryItems})`;
+}
+
+// Funktion för att disablea button när listan är på 5
+function updateButtonStates() {
+  if (itemListContainer.childElementCount >= maxInventoryItems) {
+    addItemButton.disabled = true;
+  } else {
+    addItemButton.disabled = false;
+  }
 }
 
 function saveCharacter() {
